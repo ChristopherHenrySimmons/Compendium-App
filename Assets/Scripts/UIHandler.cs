@@ -9,6 +9,8 @@ public class UIHandler : MonoBehaviour
     public Image ImageNavMenu;
     public Image ButtonChapters; //If there are more then Three buttons chage it to an array
     public Image ButtonBack;
+    public Image ButtonSections;
+    //public ArrayButtons [Image ImageNavMenu,];
 
     public void buttonEvent(){
         Debug.Log("Login");
@@ -39,6 +41,7 @@ public class UIHandler : MonoBehaviour
         ImageNavMenu.fillAmount = ImageNavMenu.fillAmount + i;
         ButtonChapters.fillAmount = ButtonChapters.fillAmount + i;
         ButtonBack.fillAmount = ButtonBack.fillAmount + i;
+        ButtonSections.fillAmount = ButtonSections.fillAmount + i;
         if (ImageNavMenu.fillAmount < 1 && ImageNavMenu.fillAmount > 0)
         {
             StartCoroutine(startSlide(i));
